@@ -9,6 +9,7 @@
 | Currency | Every figure in **EUR and USD** (1 EUR = <!-- val:usd-per-eur -->1.15<!-- /val --> USD, configurable) |
 | Regions | Calibrated on **Spain Central**; indexed for the main European regions and the major US regions (section 13) |
 | Source of figures | Reproducible parametric model in [`calculator/`](../calculator/). Every marked table is regenerated with `python calculator/finops_calculator.py --update-docs` |
+| Generated with | Google Antigravity — **Claude Opus 5.5 (High)** (study, parametric FinOps model, Python calculator & Mermaid diagrams) |
 | Status | Reference document. Figures are estimates: validate them with the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) and your contract prices |
 
 > [!IMPORTANT]
@@ -746,6 +747,7 @@ Aligned with the *Inform → Optimize → Operate* phases of the [FinOps Framewo
 - **Human effort.** Operations FTEs and build costs are expert-judgement estimates for teams of average experience. Calibrate them with your own data: they are the parameters with the greatest influence on choices between A, B and C.
 - **Value.** The value model is deliberately conservative (50% realisation). It excludes incremental revenue, customer-satisfaction gains and risk reduction, which can be significant depending on the use case.
 - **Out of scope.** Messaging-channel licences, content ingestion and curation, change management and training, and inter-region data egress.
+- **AI generation & provenance.** Generated in **Google Antigravity** using **Claude Opus 5.5 (High)** for the study text, parametric FinOps model, Python calculator, unit tests and Mermaid diagrams, with related-video catalog verification assisted by **Gemini Flash** and repository updates integrated via the **Antigravity Orchestrator**. All numbers are programmatically derived from [`calculator/assumptions.json`](../calculator/assumptions.json) and verified via unit tests and CI.
 
 ---
 

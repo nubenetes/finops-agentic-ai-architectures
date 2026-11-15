@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/nubenetes/finops-agentic-ai-architectures/actions/workflows/ci.yml/badge.svg)](https://github.com/nubenetes/finops-agentic-ai-architectures/actions/workflows/ci.yml)
 [![Report: Markdown + Mermaid](https://img.shields.io/badge/Report-Markdown_%2B_Mermaid-4338ca)](docs/finops-agentic-ai-architectures-study.md)
+[![Generated with: Claude Opus 5.5 in Google Antigravity](https://img.shields.io/badge/Generated_with-Claude_Opus_5.5_(Antigravity)-D97757?logo=anthropic&logoColor=white)](#ai-generation--provenance)
 [![Framework: FinOps Foundation](https://img.shields.io/badge/Framework-FinOps_Foundation-0f766e)](https://www.finops.org/framework/)
 [![Currency: EUR + USD](https://img.shields.io/badge/Currency-EUR_%2B_USD-15803d)](calculator/assumptions.json)
 [![Regions: EU + US](https://img.shields.io/badge/Regions-Spain_Central_·_EU_·_US-0078D4?logo=microsoftazure)](docs/finops-agentic-ai-architectures-study.md#13-regional-analysis-europe-and-the-united-states)
@@ -11,6 +12,8 @@
 A vendor-neutral, industry-agnostic **FinOps study and decision model** for enterprise **agentic-AI platforms** (assistants and agents with deterministic guardrails) on Microsoft Azure. It helps any organisation — from a start-up to a global corporation, from a 1,000-query pilot to a multi-million-query B2C app — decide **which architecture is the most cost-effective, and when to switch from one to another**.
 
 > 📖 **Full study (Markdown with Mermaid diagrams, rendered natively by GitHub)**: [docs/finops-agentic-ai-architectures-study.md](docs/finops-agentic-ai-architectures-study.md)
+>
+> 🤖 **AI Generation & Provenance**: The study, parametric FinOps model, Python calculator, unit tests and Mermaid diagrams in this repository were generated in **Google Antigravity** using **Claude Opus 5.5 (High)**, with YouTube catalog verification assisted by **Gemini Flash** and final updates via the **Antigravity Orchestrator**.
 
 ## What it compares
 
@@ -101,6 +104,29 @@ python calculator/finops_calculator.py --update-docs
 
 All assumptions — fixed costs per profile, per-query AI costs, regional price indices, exchange rate, FTE cost, build cost, value model — live in [`calculator/assumptions.json`](calculator/assumptions.json). Edit them with your contract prices and run `--update-docs` to regenerate the report.
 
+## Related Videos on @nubenetes (YouTube)
+
+While the [@nubenetes](https://www.youtube.com/@nubenetes) YouTube channel does not yet have a dedicated video covering the full composite 4-architecture + SaaS + regional FinOps model in this repository, the following existing sessions cover its individual architectural and FinOps pillars:
+
+### Long-Form Architectural & FinOps Guides
+
+1. [The Great Foundry Shift: Enterprise AI Operating Model & FinOps Governance](https://www.youtube.com/watch?v=CkFIcxzEnVw) — FinOps governance for GenAI on Microsoft Foundry, Pay-As-You-Go vs. Provisioned Throughput (PTU) break-even, TPM limits, and Azure data sovereignty.
+2. [Cloud AI vs Kubernetes 2026: The Enterprise AI Control Plane Showdown](https://www.youtube.com/watch?v=9zosnOzQ90o) — Managed cloud AI control planes (Foundry, Bedrock, Vertex) vs. Kubernetes (AKS) for agentic platforms, "Zero Idle GPU Tax", MCP tool gateways, and data sovereignty.
+3. [Azure Container Apps vs AKS: Networking, VNet Security & FinOps Economics](https://www.youtube.com/watch?v=BeOCYxr9uYE) — Mathematical FinOps modelling and break-even thresholds (scale-to-zero vs. steady-state on AKS) and VNet isolation.
+4. [Azure Container Apps vs AKS: Azure Functions Integration & The 5-Lens Framework](https://www.youtube.com/watch?v=1hpnz3cz1Co) — Evaluating ACA vs. AKS including Azure Functions integration across five architectural lenses.
+5. [Microsoft Foundry Deep Dive: Agent Service, Responses API & Observability](https://www.youtube.com/watch?v=STC4L1w2cPg) — Foundry Agent Service runtime, threads, tool calling, and tracing (Architecture B runtime).
+6. [The 2026 Infrastructure Fork: Managed Cloud AI vs Disaggregated K8s Serving](https://www.youtube.com/watch?v=TUyX5PzEPGA) — Managed cloud AI platforms vs. disaggregated Kubernetes serving trade-offs.
+7. [Azure Storage WORM Optimizado: Arquitectura y Cumplimiento Legal en Spain Central](https://www.youtube.com/watch?v=IZBAQg3kP7c) — Immutable WORM storage architecture and legal compliance in the Azure Spain Central region.
+8. [Agentic SRE Defense in Depth: Zero-Trust Security for AI Agents](https://www.youtube.com/watch?v=XOrOjcgR_zg) — Zero-trust security guardrails, IAM, and prompt-injection defense for autonomous agents.
+9. [Building an MCP SRE Agent: Kubernetes Tools & Production Guardrails](https://www.youtube.com/watch?v=bWBZR6rpm2s) — Deterministic execution guardrails for MCP-based agents on Kubernetes.
+
+### Technical Shorts
+
+1. [AKS vs Azure Container Apps: The Cost of Control & Scale-to-Zero FinOps](https://www.youtube.com/shorts/NHeyQpW6i5s) — 1-minute comparison of scale-to-zero serverless economics vs. AKS fixed control planes.
+2. [How the FinOps CLI Automates Break Even Math](https://www.youtube.com/shorts/-iJ65ex08dA) — Automating break-even calculations from the command line on Azure.
+3. [Microsoft Foundry Production Readiness: Evaluations, SLAs & Safety](https://www.youtube.com/shorts/JDlkNqJIy9Q) — Continuous evaluation, safety guardrails, and production readiness in Microsoft Foundry.
+4. [Microsoft Foundry Enterprise Controls: Security, VNet & Deadlines](https://www.youtube.com/shorts/i72ZvGizCEE) — VNet injection and enterprise security controls in Microsoft Foundry.
+
 ## Repository structure
 
 ```text
@@ -117,7 +143,14 @@ All assumptions — fixed costs per profile, per-query AI costs, regional price 
 
 ## Disclaimer
 
-Figures are **indicative estimates** based on list prices (November 2026, no discounts or taxes), an indicative regional price index and expert-judgement effort assumptions. They are meant to compare options and locate thresholds, not to quote a project. Validate with the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/), your agreement's prices and your own operational data. Service and model availability differs by region. Content generated with AI assistance and reviewed for consistency; the model is fully reproducible and open to contributions.
+Figures are **indicative estimates** based on list prices (November 2026, no discounts or taxes), an indicative regional price index and expert-judgement effort assumptions. They are meant to compare options and locate thresholds, not to quote a project. Validate with the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/), your agreement's prices and your own operational data. Service and model availability differs by region.
+
+### AI generation & provenance
+
+- **Authoring platform**: [Google Antigravity](https://antigravity.google/)
+- **Primary model**: **Claude Opus 5.5 (High)** — authored the FinOps architecture study (`docs/finops-agentic-ai-architectures-study.md`), the parametric FinOps mathematical model (`calculator/assumptions.json`), the Python calculator and table generator (`calculator/finops_calculator.py`), unit tests (`calculator/test_finops_calculator.py`), and all Mermaid diagrams.
+- **Catalog verification**: **Gemini Flash** (browser subagent) — audited the `@nubenetes` YouTube channel video and Shorts catalog to identify related sessions.
+- **Repository updates**: **Antigravity Orchestrator** — integrated the related videos catalog, AI provenance metadata, and verified CI checks.
 
 ## License
 
