@@ -176,21 +176,22 @@ All assumptions — fixed costs per profile, per-query AI costs, regional price 
 
 ## Official Video Series & Curated YouTube Playlists (@nubenetes)
 
-This repository is backed by a dedicated **12-video multimedia curriculum** on the official [@nubenetes](https://www.youtube.com/@nubenetes) YouTube channel (**5 long-form architectural & FinOps deep dives** and **7 focused technical Shorts**) alongside cross-referenced topic tracks and the [Nubenetes Video Hub (`nubenetes.com/videos/`)](https://nubenetes.com/videos/).
+This repository is backed by a dedicated **12-video multimedia curriculum** on the official [@nubenetes](https://www.youtube.com/@nubenetes) YouTube channel (**5 long-form architectural & FinOps deep dives** and **7 focused technical Shorts**) alongside 100% `@nubenetes`-exclusive companion series and the [Nubenetes Video Hub (`nubenetes.com/videos/`)](https://nubenetes.com/videos/).
 
 ### Curated YouTube Playlists
 
-| Track Type | Playlist | Scope & Cross-References |
+All curated tracks below contain strictly `@nubenetes`-authored sessions and are synchronized with [nubenetes.com/videos/](https://nubenetes.com/videos/):
+
+| Track Type | Official `@nubenetes` Playlist | Scope & Relationship to This Study |
 | :--- | :--- | :--- |
 | **Primary Flagship Series** | [**⭐ Nubenetes FinOps for Agentic AI Architectures: Azure TCO, Foundry, AKS & Serverless**](https://www.youtube.com/playlist?list=PLLvKIaVqVF78) | Official 12-part playlist (5 deep dives + 7 Shorts) walking end-to-end through this repository's 4-zone deterministic guardrail pattern, A/B/C/D/S topologies, P1–P3 profiles, TCO crossovers, model routing, and DEV/PRE/PRO private parity. Also featured at [nubenetes.com/videos/ai-agents/](https://nubenetes.com/videos/ai-agents/). |
-| **Topic Track · FinOps** | [**004 - FinOps**](https://www.youtube.com/playlist?list=PLNo5gpY5DCO4Iw79NHNoLbuxfVIbrSx2J) | Cloud financial operations track housing all 12 videos from this study plus hybrid IaaS, container, and storage economics. |
-| **Topic Track · AI** | [**141 - AI**](https://www.youtube.com/playlist?list=PLNo5gpY5DCO4G3GNUIqSMGEEZ1cJ6LkfD) | Enterprise AI & agentic architecture collection including all 12 videos from this repository. |
-| **Topic Track · Azure** | [**083 - Azure**](https://www.youtube.com/playlist?list=PLNo5gpY5DCO7b6t0iBps8Y6oUrstV4tOa) | Microsoft Azure engineering catalog including all 12 videos from this study. |
-| **Topic Track · Platform Engineering** | [**117 - Platform Engineering**](https://www.youtube.com/playlist?list=PLNo5gpY5DCO4zVdZPDn3EZ8HUt_VYJv5N) | Internal developer platforms and agentic landing zones (includes the 5 deep dives + 4 architecture Shorts). |
-| **Topic Track · Serverless** | [**011 - NoOps Serverless**](https://www.youtube.com/playlist?list=PLNo5gpY5DCO4cUVxRtFsb-iKkFP16lwFR) | Azure Functions Flex Consumption & serverless agentic architectures (Options A & B sessions). |
-| **Topic Track · Kubernetes** | [**013 - Kubernetes**](https://www.youtube.com/playlist?list=PLNo5gpY5DCO726yjYOilX649dyB3Z734y) & [**026 - Managed Kubernetes on Cloud**](https://www.youtube.com/playlist?list=PLNo5gpY5DCO4SlpKUA7B8RlufWlGCwRAx) | AKS Automatic tipping point, GPU self-hosting, and Kubernetes vs. managed PaaS deep dives (Option C sessions). |
-| **Podcast Track** | [**⭐ Nubenetes Cloud Native Podcasts (English)**](https://www.youtube.com/playlist?list=PLBMAtCXWYfZA) | Long-form spoken engineering discussions including the 5 FinOps for Agentic AI deep-dive sessions. |
-| **Companion Series** | [**Microsoft Foundry**](https://www.youtube.com/playlist?list=PLIHPlQVunY48) · [**Enterprise AI Platforms**](https://www.youtube.com/playlist?list=PLBZl7QsgYjrw) · [**Azure Container Strategy**](https://www.youtube.com/playlist?list=PLUlxI33bzjWQ) · [**Azure Hybrid IaaS FinOps**](https://www.youtube.com/playlist?list=PLaNxiRbEBYJ8) · [**AI SRE & Agentic Operations**](https://www.youtube.com/playlist?list=PLckcDbnSNdbE) · [**MCP SRE Agents & Security**](https://www.youtube.com/playlist?list=PLa99gsQrC--U) | Deep dives on individual architectural foundations (Foundry Agent Service, ACA vs. AKS, hybrid IaaS FinOps, agentic guardrails, and MCP execution safety). |
+| **Microsoft Foundry Track** | [**Nubenetes Microsoft Foundry: Enterprise AI Architecture, Security & Production Readiness**](https://www.youtube.com/playlist?list=PLIHPlQVunY48) | Control-plane architecture, Agent Service, Responses API, automated evaluations, VNet controls, and PTU governance (Option **B** core runtime). |
+| **Enterprise AI Platforms Track** | [**Nubenetes Enterprise AI Platforms: Cloud Control Planes vs Kubernetes & Agentic FinOps**](https://www.youtube.com/playlist?list=PLBZl7QsgYjrw) | Architectural trade-offs and TCO crossovers comparing managed cloud AI control planes vs. Kubernetes (Options **B** vs. **C**). |
+| **Azure Container Strategy Track** | [**Nubenetes Azure Container Strategy: AKS vs Container Apps, Networking & FinOps**](https://www.youtube.com/playlist?list=PLUlxI33bzjWQ) | Break-even maths, Functions integration, and VNet isolation across AKS, Container Apps, and serverless runtimes (Options **A**, **C**, and **D**). |
+| **Azure Hybrid IaaS FinOps Track** | [**Nubenetes Azure Hybrid IaaS FinOps Framework**](https://www.youtube.com/playlist?list=PLaNxiRbEBYJ8) | Azure compliance, storage WORM immutability, regional economics, and FinOps cost governance in EU/Spain Central workloads. |
+| **AI SRE & Agentic Operations Track** | [**Nubenetes AI SRE & Agentic Operations: Trust Ladder, Magentic Pattern & Self-Healing**](https://www.youtube.com/playlist?list=PLckcDbnSNdbE) | Zero-trust guardrails, human-in-the-loop escalation thresholds, and deterministic safety barriers for autonomous agents (Zones 1, 3, and 4). |
+| **MCP SRE & Security Track** | [**Nubenetes MCP SRE Agents & Security: Kubernetes, Ghostjacking & Defense in Depth**](https://www.youtube.com/playlist?list=PLa99gsQrC--U) | Deterministic execution permits, prompt-injection defense, and scoped Kubernetes tool guardrails. |
+| **English Podcasts Track** | [**⭐ Nubenetes Cloud Native Podcasts (English)**](https://www.youtube.com/playlist?list=PLBMAtCXWYfZA) | Long-form spoken engineering discussions including the 5 FinOps for Agentic AI deep-dive sessions. |
 
 ### Dedicated Video Series for This Study (12 Sessions)
 
