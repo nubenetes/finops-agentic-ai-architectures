@@ -24,9 +24,11 @@ A vendor-neutral, industry-agnostic **FinOps study and decision model** for ente
   - [Decision tree](#decision-tree)
 - [Full Study Index (docs/finops-agentic-ai-architectures-study.md)](#full-study-index-docsfinops-agentic-ai-architectures-studymd)
 - [Run the calculator](#run-the-calculator)
-- [Related Videos on @nubenetes (YouTube)](#related-videos-on-nubenetes-youtube)
-  - [Long-Form Architectural & FinOps Guides](#long-form-architectural--finops-guides)
-  - [Technical Shorts](#technical-shorts)
+- [Official Video Series & Curated YouTube Playlists (@nubenetes)](#official-video-series--curated-youtube-playlists-nubenetes)
+  - [Curated YouTube Playlists](#curated-youtube-playlists)
+  - [Dedicated Video Series for This Study (12 Sessions)](#dedicated-video-series-for-this-study-12-sessions)
+  - [Per-Video Architectural Summaries](#per-video-architectural-summaries)
+  - [Companion @nubenetes Sessions on Individual Pillars](#companion-nubenetes-sessions-on-individual-pillars)
 - [Repository structure](#repository-structure)
 - [Disclaimer](#disclaimer)
   - [AI generation & provenance](#ai-generation--provenance)
@@ -172,11 +174,94 @@ python calculator/finops_calculator.py --update-docs
 
 All assumptions — fixed costs per profile, per-query AI costs, regional price indices, exchange rate, FTE cost, build cost, value model — live in [`calculator/assumptions.json`](calculator/assumptions.json). Edit them with your contract prices and run `--update-docs` to regenerate the report.
 
-## Related Videos on @nubenetes (YouTube)
+## Official Video Series & Curated YouTube Playlists (@nubenetes)
 
-While the [@nubenetes](https://www.youtube.com/@nubenetes) YouTube channel does not yet have a dedicated video covering the full composite 4-architecture + SaaS + regional FinOps model in this repository, the following existing sessions cover its individual architectural and FinOps pillars:
+This repository is backed by a dedicated **12-video multimedia curriculum** on the official [@nubenetes](https://www.youtube.com/@nubenetes) YouTube channel (**5 long-form architectural & FinOps deep dives** and **7 focused technical Shorts**) alongside cross-referenced topic tracks and the [Nubenetes Video Hub (`nubenetes.com/videos/`)](https://nubenetes.com/videos/).
 
-### Long-Form Architectural & FinOps Guides
+### Curated YouTube Playlists
+
+| Track Type | Playlist | Scope & Cross-References |
+| :--- | :--- | :--- |
+| **Primary Flagship Series** | [**⭐ Nubenetes FinOps for Agentic AI Architectures: Azure TCO, Foundry, AKS & Serverless**](https://www.youtube.com/playlist?list=PLLvKIaVqVF78) | Official 12-part playlist (5 deep dives + 7 Shorts) walking end-to-end through this repository's 4-zone deterministic guardrail pattern, A/B/C/D/S topologies, P1–P3 profiles, TCO crossovers, model routing, and DEV/PRE/PRO private parity. Also featured at [nubenetes.com/videos/ai-agents/](https://nubenetes.com/videos/ai-agents/). |
+| **Topic Track · FinOps** | [**004 - FinOps**](https://www.youtube.com/playlist?list=PLNo5gpY5DCO4Iw79NHNoLbuxfVIbrSx2J) | Cloud financial operations track housing all 12 videos from this study plus hybrid IaaS, container, and storage economics. |
+| **Topic Track · AI** | [**141 - AI**](https://www.youtube.com/playlist?list=PLNo5gpY5DCO4G3GNUIqSMGEEZ1cJ6LkfD) | Enterprise AI & agentic architecture collection including all 12 videos from this repository. |
+| **Topic Track · Azure** | [**083 - Azure**](https://www.youtube.com/playlist?list=PLNo5gpY5DCO7b6t0iBps8Y6oUrstV4tOa) | Microsoft Azure engineering catalog including all 12 videos from this study. |
+| **Topic Track · Platform Engineering** | [**117 - Platform Engineering**](https://www.youtube.com/playlist?list=PLNo5gpY5DCO4zVdZPDn3EZ8HUt_VYJv5N) | Internal developer platforms and agentic landing zones (includes the 5 deep dives + 4 architecture Shorts). |
+| **Topic Track · Serverless** | [**011 - NoOps Serverless**](https://www.youtube.com/playlist?list=PLNo5gpY5DCO4cUVxRtFsb-iKkFP16lwFR) | Azure Functions Flex Consumption & serverless agentic architectures (Options A & B sessions). |
+| **Topic Track · Kubernetes** | [**013 - Kubernetes**](https://www.youtube.com/playlist?list=PLNo5gpY5DCO726yjYOilX649dyB3Z734y) & [**026 - Managed Kubernetes on Cloud**](https://www.youtube.com/playlist?list=PLNo5gpY5DCO4SlpKUA7B8RlufWlGCwRAx) | AKS Automatic tipping point, GPU self-hosting, and Kubernetes vs. managed PaaS deep dives (Option C sessions). |
+| **Podcast Track** | [**⭐ Nubenetes Cloud Native Podcasts (English)**](https://www.youtube.com/playlist?list=PLBMAtCXWYfZA) | Long-form spoken engineering discussions including the 5 FinOps for Agentic AI deep-dive sessions. |
+| **Companion Series** | [**Microsoft Foundry**](https://www.youtube.com/playlist?list=PLIHPlQVunY48) · [**Enterprise AI Platforms**](https://www.youtube.com/playlist?list=PLBZl7QsgYjrw) · [**Azure Container Strategy**](https://www.youtube.com/playlist?list=PLUlxI33bzjWQ) · [**Azure Hybrid IaaS FinOps**](https://www.youtube.com/playlist?list=PLaNxiRbEBYJ8) · [**AI SRE & Agentic Operations**](https://www.youtube.com/playlist?list=PLckcDbnSNdbE) · [**MCP SRE Agents & Security**](https://www.youtube.com/playlist?list=PLa99gsQrC--U) | Deep dives on individual architectural foundations (Foundry Agent Service, ACA vs. AKS, hybrid IaaS FinOps, agentic guardrails, and MCP execution safety). |
+
+### Dedicated Video Series for This Study (12 Sessions)
+
+| # | Format | Video Title & Link | Duration | Study Sections Covered |
+| :-: | :---: | :--- | :---: | :--- |
+| 1 | Deep Dive | [**Agentic AI on Azure TCO: Serverless, Foundry, AKS & Container Apps FinOps Guide**](https://www.youtube.com/watch?v=wbG4ZO3BF_U) | 9:44 | Sections 0–5 |
+| 2 | Deep Dive | [**Azure Agentic AI Architectures Compared: Functions, Foundry, AKS & ACA Crossover**](https://www.youtube.com/watch?v=0SH6H5phFP4) | 7:23 | Sections 3, 6–8 |
+| 3 | Deep Dive | [**FinOps for Agentic AI: Cost Equations, Model Routing, Caching & PTU Break-Even**](https://www.youtube.com/watch?v=10-s91vgbQs) | 7:10 | Sections 4, 6, 9 |
+| 4 | Deep Dive | [**SaaS vs Build on Azure: Agentic AI Break-Even, Multi-Agent TCO & ROI Model**](https://www.youtube.com/watch?v=cKmt7jhtCAo) | 9:05 | Sections 8.2–8.3, 10–11 |
+| 5 | Deep Dive | [**Agentic AI FinOps Operations: DEV/PRE/PRO Parity, EU/US Regions & Anti-Patterns**](https://www.youtube.com/watch?v=i5UzI-FrFfU) | 7:40 | Sections 12–17 |
+| 6 | Short | [**Choosing the Most Cost-Effective Azure AI Architecture for Your Enterprise**](https://www.youtube.com/shorts/Dsv6AclJKik) | 1:28 | Sections 0, 15 |
+| 7 | Short | [**How to Stop Overpaying for Azure AI Agents (Pilot Paradox)**](https://www.youtube.com/shorts/vAat9zOBBzI) | 1:28 | Sections 5, 17 |
+| 8 | Short | [**Why Enterprise AI Architecture Scales by Agents, Not Volume**](https://www.youtube.com/shorts/8Lq9pNc7J7g) | 1:25 | Sections 8.2, 11.2 |
+| 9 | Short | [**How Break-Even Analysis Dictates Your Enterprise AI Strategy**](https://www.youtube.com/shorts/Enu5sqiYstc) | 1:18 | Sections 4.2, 10.2, 11.1 |
+| 10 | Short | [**FinOps for AI: The Kubernetes (AKS) Tipping Point on Azure**](https://www.youtube.com/shorts/g7LOltuhtx0) | 1:14 | Sections 8.1, 9.1, 15 |
+| 11 | Short | [**How Model Routing & Semantic Caching Slash Agentic AI Costs**](https://www.youtube.com/shorts/iCGUTVuWwgY) | 1:26 | Sections 9, 16.2 |
+| 12 | Short | [**How Decoupled Agentic AI Architecture Absorbs Traffic Spikes**](https://www.youtube.com/shorts/k8yBySfHSfE) | 1:11 | Sections 2, 9.2, 12.2 |
+
+### Per-Video Architectural Summaries
+
+#### 1. Agentic AI on Azure TCO: Serverless, Foundry, AKS & Container Apps FinOps Guide (9:44)
+
+[Watch on YouTube (`wbG4ZO3BF_U`)](https://www.youtube.com/watch?v=wbG4ZO3BF_U) — Comprehensive walkthrough of the full FinOps decision model (Sections 0–5). Explains the **4-zone, 9-step deterministic guardrail pattern** separating non-AI controls (Zone 1 ingress masking, `usr_7K2` pseudonym vault, and prompt-injection admission; Zone 3 deterministic verifier, certainty threshold, and single-use permit hash; Zone 4 one-time egress re-identification and Merkle WORM audit sealing) from Zone 2's cognitive plane. Contrasts candidate topologies **A** (Functions Flex Consumption + Durable Functions), **B** (Microsoft Foundry Agent Service + Functions), **C** (AKS Automatic + Gateway API + Kafka), **D** (Container Apps + Service Bus Premium + APIM Standard v2), and **S** (Per-seat SaaS) across security profiles P1–P3, illustrating the **Low-Volume Pilot Paradox** in P3 Spain Central (1,000 queries/month): **97.1%–99.3% of the monthly cloud bill is fixed infrastructure cost** (`€986 / $1,133` on A, `€1,107 / $1,273` on B, `€1,525 / $1,754` on C, and `€3,956 / $4,549` on D).
+
+#### 2. Azure Agentic AI Architectures Compared: Functions, Foundry, AKS & ACA Crossover (7:23)
+
+[Watch on YouTube (`0SH6H5phFP4`)](https://www.youtube.com/watch?v=0SH6H5phFP4) — Deep-dive comparison of compute, orchestration, and integration planes across Options A, B, C, and D across security profiles **P1 Essential** (DEV + PRO, public endpoints + basic WAF, Global AI), **P2 Standard** (DEV + PRE + PRO, Private Endpoints in PRO, Data Zone EU/US), and **P3 Regulated** (full DEV/PRE/PRO private-network parity, HSM CMK, WORM sealing). Quantifies how fixed monthly infrastructure scales across P1/P2/P3 (`€140 / €520 / €957` on A; `€165 / €580 / €1,078` on B; `€620 / €1,050 / €1,498` on C; `€430 / €2,150 / €3,928` on D), maps the unit-efficiency thresholds `Q* = F / v` (`33,600` to `142,800` queries/month in P3), and walks through the exact **B vs. C crossovers**: `191k` queries/month on raw cloud bill, **`2.0 M` queries/month on full TCO** (including `0.60` vs. `0.22` base FTEs at `€6,500/mo` and `36`-month build amortisation), and **`275k` queries/month** when an existing Kubernetes platform team is already amortised.
+
+#### 3. FinOps for Agentic AI: Cost Equations, Model Routing, Caching & PTU Break-Even (7:10)
+
+[Watch on YouTube (`10-s91vgbQs`)](https://www.youtube.com/watch?v=10-s91vgbQs) — Dissects the parametric TCO equation across `1,000` to `5,000,000` queries/month (`cloud fixed + cloud variable + capacity steps E(Q) + operations FTE + build amortisation`, Sections 4, 6, and 9). Demonstrates sensitivity across three interaction profiles—**FAQ / Light RAG** (`€0.004/query`), **Verified RAG** (`€0.026/query`), and **Multi-Step Agentic** (`€0.120/query`, 5–15× higher variable cost)—and proves why AI spend reaches **60–96% of total cloud cost above `250k` queries/month** (`€31,628/mo` on B P3 at `1 M` standard queries; `€125,628/mo` for agentic). Shows how **model routing (`-45%`) combined with semantic caching (`-65%` total AI saving)** drops `1 M` standard queries on B P3 from `€31,628` to `€14,728/mo`, locates the **`~550k` queries/month break-even for self-hosting a small language model on two HA GPU nodes (`€2,200 / $2,530/mo`)**, and details when Provisioned Throughput Units (**PTUs at >60–70% sustained utilisation**) outperform pay-per-token.
+
+#### 4. SaaS vs Build on Azure: Agentic AI Break-Even, Multi-Agent TCO & ROI Model (9:05)
+
+[Watch on YouTube (`cKmt7jhtCAo`)](https://www.youtube.com/watch?v=cKmt7jhtCAo) — Strategic build-vs-buy, multi-agent scaling, and ROI business case analysis (Sections 8.2–8.3, 10, and 11). Evaluates five enterprise segments from **XS Start-up** (<50 users, 1k queries/mo on A P1) to **XL Global Corporation** (>20,000 users, 1.5M queries/mo on B P3 across 3 regions) against per-seat SaaS (`€28 / $32 per user/month`), pinpointing the **user break-even thresholds for Platform B at ~`88` users (P1), ~`153` users (P2), and ~`251` users (P3)**. Proves mathematically why **agent count—not volume—governs A vs. B** (`1–2` agents favour A Serverless, whereas from **`3+` agents** at `10k` queries/mo in P2, B's TCO `€4,930 / $5,670` beats A's `€5,292 / $6,085` and widens to `€6,765` vs. `€10,632` at 12 agents), examines US vs. European FTE labour sensitivity (`€4,500`–`€11,500/mo`), and tracks ROI payback under conservative **realised value (`€1.63 / $1.88` per query)** reaching **3.1× value/TCO (7.9-month payback)** at 3 use cases and **16.0× (1.1-month payback)** company-wide.
+
+#### 5. Agentic AI FinOps Operations: DEV/PRE/PRO Parity, EU/US Regions & Anti-Patterns (7:40)
+
+[Watch on YouTube (`i5UzI-FrFfU`)](https://www.youtube.com/watch?v=i5UzI-FrFfU) — Production FinOps engineering blueprint covering network parity, regional economics, FinOps Framework governance, and anti-patterns (Sections 12–17). Walks line-by-line through **DEV/PRE/PRO private-network parity** provisioned with Azure Verified Modules (AVM) in P3 Spain Central (`€1,106.80 / $1,272.82/mo` total on B: `€150.10` DEV + `€190.60` PRE + `€766.10` PRO covering Front Door Premium + WAF, Private Endpoints, PostgreSQL Flexible pseudonym vault, AI Search Basic, Key Vault Premium HSM, and Blob WORM vs. `€3,955.99` on D). Benchmarks **16 EU and US regions indexed to Spain Central (`1.00`)**—showing **Sweden Central (`0.94`, `€1,042` B pilot)** and **North Europe (`0.95`, `€1,053`)** as the lowest-cost EU options, **East US 2 (`0.87`, `€966`, `-13%`)** as lowest in the US, and **Switzerland North (`1.18`, `€1,302`)** as highest—maps **Inform → Optimize → Operate** KPIs (FOCUS billing, per-agent token attribution, basic/archive trace retention), and audits the **9 common cost anti-patterns** in Section 17.
+
+#### 6. Choosing the Most Cost-Effective Azure AI Architecture for Your Enterprise (1:28 Short)
+
+[Watch on YouTube (`Dsv6AclJKik`)](https://www.youtube.com/shorts/Dsv6AclJKik) — Concise 88-second walkthrough of the repository's 6-step decision tree comparing **S (Per-Seat SaaS)**, **A (Pure Serverless Functions)**, **B (Microsoft Foundry + Functions)**, **C (AKS Automatic)**, and **D (Container Apps + Service Bus Premium + APIM)** by use-case specificity, GPU/self-hosting needs, query volume (`275k`/`2.0M`), shared corporate integration, and expected agent count (`3+`).
+
+#### 7. How to Stop Overpaying for Azure AI Agents (Pilot Paradox) (1:28 Short)
+
+[Watch on YouTube (`vAat9zOBBzI`)](https://www.youtube.com/shorts/vAat9zOBBzI) — Explains why **97.1%–99.3%** of a 1,000-query/month regulated Azure AI pilot bill is fixed platform cost (`€3.96/query` on dedicated APIM + Service Bus Premium vs. `€0.99/query` on A Serverless and `€1.11/query` on B Microsoft Foundry) and highlights key anti-patterns: provisioning APIM/Service Bus Premium for pilots, full HA in DEV/PRE, and premature capacity reservations.
+
+#### 8. Why Enterprise AI Architecture Scales by Agents, Not Volume (1:25 Short)
+
+[Watch on YouTube (`8Lq9pNc7J7g`)](https://www.youtube.com/shorts/8Lq9pNc7J7g) — Summarises Section 8.2's core insight: with a single agent, Pure Serverless (A) stays cheapest on fixed cost, yet the **crossover to Microsoft Foundry (B) is triggered at 3+ agents** (`€4,930` vs. `€5,292` TCO/mo in P2 at `10k` queries/mo) because Foundry amortises evaluations, guardrails, model routing, and VNet plumbing across every new use case at near-zero marginal fixed cost.
+
+#### 9. How Break-Even Analysis Dictates Your Enterprise AI Strategy (1:18 Short)
+
+[Watch on YouTube (`Enu5sqiYstc`)](https://www.youtube.com/shorts/Enu5sqiYstc) — Breaks down the three parametric FinOps thresholds from Section 4.2 and Section 11—the **unit-efficiency threshold `Q* = F / v`** (when AI variable cost overtakes fixed infra), **architecture crossover volume**, and **ROI payback** (`€1.63 / $1.88` realised value per query)—alongside the per-seat SaaS user break-evens (`~88` users in P1, `~153` in P2, `~251` in P3).
+
+#### 10. FinOps for AI: The Kubernetes (AKS) Tipping Point on Azure (1:14 Short)
+
+[Watch on YouTube (`g7LOltuhtx0`)](https://www.youtube.com/shorts/g7LOltuhtx0) — Pinpoints exact economic tipping points for **AKS Automatic (C)** vs. **Microsoft Foundry (B)** in P3: **`191k` queries/month** on raw cloud bill only, **`2.0 M` queries/month** on full TCO (`0.60` FTE ops burden), or **`275k` queries/month** with an already-amortised Kubernetes team—plus **`~550k` queries/month** for self-hosted SLMs on HA GPU nodes (`€2,200/mo`).
+
+#### 11. How Model Routing & Semantic Caching Slash Agentic AI Costs (1:26 Short)
+
+[Watch on YouTube (`iCGUTVuWwgY`)](https://www.youtube.com/shorts/iCGUTVuWwgY) — Shows why optimizing token spend beats changing infrastructure above `250k` queries/month (where AI accounts for **60–96%** of the bill): routing `>60–70%` of routine queries to small models (`-45%`) and pairing **semantic caching (`-65%` combined)** cuts `1 M`-query verified RAG bills on B P3 from `€31,628` to `€14,728/month`.
+
+#### 12. How Decoupled Agentic AI Architecture Absorbs Traffic Spikes (1:11 Short)
+
+[Watch on YouTube (`k8yBySfHSfE`)](https://www.youtube.com/shorts/k8yBySfHSfE) — Illustrates Zone 1–4 separation from Sections 2 and 12.2: Front Door Premium + WAF terminates public channels over Private Link into Flex Consumption Functions and signed queues decoupled from the delegated agent subnet, smoothing burst traffic without paying for oversized always-on compute or tripping downstream PTU/TPM ceilings.
+
+### Companion @nubenetes Sessions on Individual Pillars
+
+In addition to the 12-video series dedicated directly to this study, the following existing sessions on [@nubenetes](https://www.youtube.com/@nubenetes) provide deep dives on its individual architectural and FinOps foundations:
 
 1. [The Great Foundry Shift: Enterprise AI Operating Model & FinOps Governance](https://www.youtube.com/watch?v=CkFIcxzEnVw) — FinOps governance for GenAI on Microsoft Foundry, Pay-As-You-Go vs. Provisioned Throughput (PTU) break-even, TPM limits, and Azure data sovereignty.
 2. [Cloud AI vs Kubernetes 2026: The Enterprise AI Control Plane Showdown](https://www.youtube.com/watch?v=9zosnOzQ90o) — Managed cloud AI control planes (Foundry, Bedrock, Vertex) vs. Kubernetes (AKS) for agentic platforms, "Zero Idle GPU Tax", MCP tool gateways, and data sovereignty.
@@ -187,13 +272,10 @@ While the [@nubenetes](https://www.youtube.com/@nubenetes) YouTube channel does 
 7. [Azure Storage WORM Optimizado: Arquitectura y Cumplimiento Legal en Spain Central](https://www.youtube.com/watch?v=IZBAQg3kP7c) — Immutable WORM storage architecture and legal compliance in the Azure Spain Central region.
 8. [Agentic SRE Defense in Depth: Zero-Trust Security for AI Agents](https://www.youtube.com/watch?v=XOrOjcgR_zg) — Zero-trust security guardrails, IAM, and prompt-injection defense for autonomous agents.
 9. [Building an MCP SRE Agent: Kubernetes Tools & Production Guardrails](https://www.youtube.com/watch?v=bWBZR6rpm2s) — Deterministic execution guardrails for MCP-based agents on Kubernetes.
-
-### Technical Shorts
-
-1. [AKS vs Azure Container Apps: The Cost of Control & Scale-to-Zero FinOps](https://www.youtube.com/shorts/NHeyQpW6i5s) — 1-minute comparison of scale-to-zero serverless economics vs. AKS fixed control planes.
-2. [How the FinOps CLI Automates Break Even Math](https://www.youtube.com/shorts/-iJ65ex08dA) — Automating break-even calculations from the command line on Azure.
-3. [Microsoft Foundry Production Readiness: Evaluations, SLAs & Safety](https://www.youtube.com/shorts/JDlkNqJIy9Q) — Continuous evaluation, safety guardrails, and production readiness in Microsoft Foundry.
-4. [Microsoft Foundry Enterprise Controls: Security, VNet & Deadlines](https://www.youtube.com/shorts/i72ZvGizCEE) — VNet injection and enterprise security controls in Microsoft Foundry.
+10. [AKS vs Azure Container Apps: The Cost of Control & Scale-to-Zero FinOps](https://www.youtube.com/shorts/NHeyQpW6i5s) — 1-minute comparison of scale-to-zero serverless economics vs. AKS fixed control planes.
+11. [How the FinOps CLI Automates Break Even Math](https://www.youtube.com/shorts/-iJ65ex08dA) — Automating break-even calculations from the command line on Azure.
+12. [Microsoft Foundry Production Readiness: Evaluations, SLAs & Safety](https://www.youtube.com/shorts/JDlkNqJIy9Q) — Continuous evaluation, safety guardrails, and production readiness in Microsoft Foundry.
+13. [Microsoft Foundry Enterprise Controls: Security, VNet & Deadlines](https://www.youtube.com/shorts/i72ZvGizCEE) — VNet injection and enterprise security controls in Microsoft Foundry.
 
 ## Repository structure
 

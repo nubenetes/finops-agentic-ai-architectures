@@ -793,3 +793,5 @@ Aligned with the *Inform → Optimize → Operate* phases of the [FinOps Framewo
 - [Azure Verified Modules](https://azure.github.io/Azure-Verified-Modules/)
 - [FinOps Framework (FinOps Foundation)](https://www.finops.org/framework/)
 - [FOCUS: open cost and usage data specification](https://focus.finops.org/)
+- [Nubenetes FinOps for Agentic AI Architectures — Official YouTube Playlist (@nubenetes)](https://www.youtube.com/playlist?list=PLLvKIaVqVF78)
+- [Nubenetes Cloud-Native & Enterprise AI Video Hub](https://nubenetes.com/videos/)
