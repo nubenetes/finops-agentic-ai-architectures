@@ -1,0 +1,10 @@
+config:
+  default: true
+  MD013: false   # long lines: tables and prose
+  MD033:         # inline HTML used for line breaks inside table cells
+    allowed_elements: [br]
+  MD060: false   # table column alignment style
+globs:
+  - "**/*.md"
+ignores:
+  - "node_modules/**"

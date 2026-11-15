@@ -1,0 +1,162 @@
+{
+  "_meta": {
+    "description": "Assumptions for the parametric FinOps model of enterprise agentic-AI platforms on Microsoft Azure. Indicative list prices, no discounts, no taxes. Replace them with your own contract (EA/MCA/CSP) prices, region and workload data before making decisions.",
+    "base_currency": "EUR",
+    "baseline_region": "spaincentral",
+    "price_reference": "2026-11",
+    "model": "monthly_tco(Q) = F[arch][profile] x region_index x region_multiplier + Q x (ai_per_query[query_profile] x deployment_factor x (1 - ai_optimization) + platform_variable[arch] x region_index) + steps(Q) + ops_fte[arch](agents) x fte_cost + build_one_off / amortization_months"
+  },
+  "currency": {
+    "usd_per_eur": 1.15,
+    "_comment": "Exchange rate used to show every figure in EUR and USD. Azure publishes list prices in USD and derives local-currency prices; check the rate applied in your agreement."
+  },
+  "regions": {
+    "_comment": "Indicative infrastructure price index relative to Spain Central (= 1.00), blended across compute, PaaS, networking and storage SKUs. AI model token prices are NOT region-indexed: they depend on the deployment type (global, data zone, regional). Always verify service and model availability per region.",
+    "spaincentral":       { "name": "Spain Central (Madrid)",              "geo": "EU", "index": 1.00, "paired": "None (availability zones; cross-region DR to France Central or West Europe)", "data_zone": "EU" },
+    "westeurope":         { "name": "West Europe (Netherlands)",           "geo": "EU", "index": 1.00, "paired": "North Europe",          "data_zone": "EU" },
+    "northeurope":        { "name": "North Europe (Ireland)",              "geo": "EU", "index": 0.95, "paired": "West Europe",           "data_zone": "EU" },
+    "francecentral":      { "name": "France Central (Paris)",              "geo": "EU", "index": 1.02, "paired": "France South",          "data_zone": "EU" },
+    "germanywestcentral": { "name": "Germany West Central (Frankfurt)",    "geo": "EU", "index": 1.04, "paired": "Germany North",         "data_zone": "EU" },
+    "swedencentral":      { "name": "Sweden Central (Gävle)",              "geo": "EU", "index": 0.94, "paired": "Sweden South",          "data_zone": "EU" },
+    "italynorth":         { "name": "Italy North (Milan)",                 "geo": "EU", "index": 1.02, "paired": "None (availability zones)", "data_zone": "EU" },
+    "polandcentral":      { "name": "Poland Central (Warsaw)",             "geo": "EU", "index": 1.00, "paired": "None (availability zones)", "data_zone": "EU" },
+    "uksouth":            { "name": "UK South (London)",                   "geo": "Europe (non-EU)", "index": 1.03, "paired": "UK West", "data_zone": "Check UK options" },
+    "switzerlandnorth":   { "name": "Switzerland North (Zurich)",          "geo": "Europe (non-EU)", "index": 1.18, "paired": "Switzerland West", "data_zone": "Check CH options" },
+    "eastus":             { "name": "East US (Virginia)",                  "geo": "US", "index": 0.88, "paired": "West US",               "data_zone": "US" },
+    "eastus2":            { "name": "East US 2 (Virginia)",                "geo": "US", "index": 0.87, "paired": "Central US",            "data_zone": "US" },
+    "centralus":          { "name": "Central US (Iowa)",                   "geo": "US", "index": 0.90, "paired": "East US 2",             "data_zone": "US" },
+    "southcentralus":     { "name": "South Central US (Texas)",            "geo": "US", "index": 0.90, "paired": "North Central US",      "data_zone": "US" },
+    "westus2":            { "name": "West US 2 (Washington)",              "geo": "US", "index": 0.90, "paired": "West Central US",       "data_zone": "US" },
+    "westus3":            { "name": "West US 3 (Arizona)",                 "geo": "US", "index": 0.88, "paired": "East US",               "data_zone": "US" }
+  },
+  "ai_deployment_types": {
+    "_comment": "Assumed token-price factor relative to a Data Zone deployment. Global routes inference to any Azure geography (cheapest, weakest residency); Data Zone keeps processing inside the EU or US data zone; Regional keeps it in a single region.",
+    "global": 0.91,
+    "data_zone": 1.00,
+    "regional": 1.05
+  },
+  "architectures": {
+    "A": {
+      "name": "Pure serverless",
+      "stack": "Azure Functions Flex Consumption + Durable Functions + queues",
+      "fixed_eur_month": { "P1": 140, "P2": 520, "P3": 957 },
+      "platform_variable_eur_per_query": 0.0025,
+      "ops_fte_base": 0.20,
+      "ops_fte_per_extra_agent": 0.04,
+      "pro_share_of_fixed": 0.68,
+      "build_factor": 0.9,
+      "build_per_extra_agent_eur": 12000
+    },
+    "B": {
+      "name": "Managed agentic platform",
+      "stack": "Microsoft Foundry (Agent Service, Model Router, Evaluations, Guardrails) + deterministic Functions",
+      "fixed_eur_month": { "P1": 165, "P2": 580, "P3": 1078 },
+      "platform_variable_eur_per_query": 0.0030,
+      "ops_fte_base": 0.22,
+      "ops_fte_per_extra_agent": 0.01,
+      "pro_share_of_fixed": 0.69,
+      "build_factor": 1.0,
+      "build_per_extra_agent_eur": 5000
+    },
+    "C": {
+      "name": "Managed Kubernetes",
+      "stack": "AKS Automatic + Gateway API + Kafka/Event Hubs + operators",
+      "fixed_eur_month": { "P1": 620, "P2": 1050, "P3": 1498 },
+      "platform_variable_eur_per_query": 0.0008,
+      "ops_fte_base": 0.60,
+      "ops_fte_per_extra_agent": 0.02,
+      "pro_share_of_fixed": 0.62,
+      "build_factor": 1.35,
+      "build_per_extra_agent_eur": 10000
+    },
+    "D": {
+      "name": "Container PaaS with enterprise integration",
+      "stack": "Azure Container Apps + Service Bus Premium + API Management Standard v2",
+      "fixed_eur_month": { "P1": 430, "P2": 2150, "P3": 3928 },
+      "platform_variable_eur_per_query": 0.0015,
+      "ops_fte_base": 0.30,
+      "ops_fte_per_extra_agent": 0.03,
+      "pro_share_of_fixed": 0.60,
+      "build_factor": 1.15,
+      "build_per_extra_agent_eur": 10000
+    }
+  },
+  "profiles": {
+    "P1": {
+      "name": "Essential",
+      "description": "2 environments (DEV + PRO), public endpoints protected by corporate identity and basic WAF, no HSM, no WORM. Internal, non-sensitive data.",
+      "default_ai_deployment": "global"
+    },
+    "P2": {
+      "name": "Standard",
+      "description": "3 environments (DEV + PRE + PRO), private networking and Private Endpoints in PRO only, Key Vault Standard, Front Door Standard. Low-risk personal data.",
+      "default_ai_deployment": "data_zone"
+    },
+    "P3": {
+      "name": "Regulated",
+      "description": "3 environments with 100% private-network parity, Key Vault Premium (HSM), customer-managed keys, WORM storage, Front Door Premium + WAF. Personal or regulated data, reinforced audit.",
+      "default_ai_deployment": "data_zone"
+    }
+  },
+  "query_profiles": {
+    "light": {
+      "name": "FAQ / light RAG",
+      "description": "~3-4k input tokens, ~0.4k output tokens, small model, frequent cache hits",
+      "ai_eur_per_query": 0.004
+    },
+    "standard": {
+      "name": "RAG with verification",
+      "description": "~8k input tokens, ~1k output tokens, model mix, content safety + PII detection + embeddings",
+      "ai_eur_per_query": 0.026
+    },
+    "agentic": {
+      "name": "Multi-step agentic",
+      "description": "~30-60k cumulative tokens, 3-8 tool calls, frontier model for planning",
+      "ai_eur_per_query": 0.12
+    }
+  },
+  "ai_optimization_savings": {
+    "none": 0.0,
+    "routing": 0.45,
+    "routing_and_cache": 0.65
+  },
+  "volume_steps": [
+    { "from_queries": 250000, "extra_eur_month": 350, "reason": "AI Search S1 in PRO + General Purpose database tier" },
+    { "from_queries": 1000000, "extra_eur_month": 1200, "reason": "Additional search replicas, database capacity and observability" },
+    { "from_queries": 5000000, "extra_eur_month": 4500, "reason": "Search partitions, state sharding and trace retention at scale" }
+  ],
+  "multi_region": {
+    "dr_region_factor_of_pro": 0.6,
+    "extra_active_cell_factor_of_pro": 1.0,
+    "ops_fte_per_extra_region": 0.05
+  },
+  "people": {
+    "fte_loaded_eur_month": 6500,
+    "_comment": "Fully loaded monthly cost of one platform engineer. Typical ranges: 4,500-7,500 EUR in Southern/Eastern Europe, 7,000-10,000 EUR in Northern/Western Europe, 11,000-16,000 USD in the US."
+  },
+  "build": {
+    "one_off_eur": { "P1": 30000, "P2": 80000, "P3": 160000 },
+    "amortization_months": 36
+  },
+  "value": {
+    "minutes_saved_per_resolved_query": 8,
+    "loaded_hourly_cost_eur": 35,
+    "automation_rate": 0.70,
+    "realization_rate": 0.50
+  },
+  "saas": {
+    "seat_eur_month": 28,
+    "queries_per_user_month": 10
+  },
+  "self_hosted_slm": {
+    "gpu_nodes_fixed_eur_month": 2200,
+    "ai_eur_per_query_saved": 0.004
+  },
+  "shared_services": {
+    "_comment": "Corporate services already paid for (sunk cost). Their cost is removed from the architecture's fixed cost; allocate them through showback.",
+    "integration_discount_eur_month": { "P1": 200, "P2": 1100, "P3": 1900 },
+    "edge_discount_eur_month": { "P1": 0, "P2": 35, "P3": 290 },
+    "k8s_team_marginal_fte": 0.18,
+    "k8s_team_build_factor": 1.1
+  }
+}

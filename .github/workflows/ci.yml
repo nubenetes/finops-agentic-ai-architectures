@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  calculator:
+    name: Calculator tests and docs freshness
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests
+        run: python -m unittest discover -s calculator -v
+      - name: Report tables are up to date with assumptions.json
+        run: |
+          python calculator/finops_calculator.py --update-docs
+          git diff --exit-code -- README.md docs/ || {
+            echo "::error::Tables are stale. Run 'python calculator/finops_calculator.py --update-docs' and commit."
+            exit 1
+          }
+      - name: Smoke test CLI
+        run: |
+          python calculator/finops_calculator.py --queries 25000 --profile P2 --agents 3 --region westeurope
+          python calculator/finops_calculator.py --queries 400000 --region eastus2 --k8s-team --json > /dev/null
+
+  markdown:
+    name: Markdown lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DavidAnson/markdownlint-cli2-action@v20
