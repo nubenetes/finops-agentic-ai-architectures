@@ -28,7 +28,6 @@ A vendor-neutral, industry-agnostic **FinOps study and decision model** for ente
   - [Curated YouTube Playlists](#curated-youtube-playlists)
   - [Dedicated Video Series for This Study (12 Sessions)](#dedicated-video-series-for-this-study-12-sessions)
   - [Per-Video Architectural Summaries](#per-video-architectural-summaries)
-  - [Companion @nubenetes Sessions on Individual Pillars](#companion-nubenetes-sessions-on-individual-pillars)
 - [Repository structure](#repository-structure)
 - [Disclaimer](#disclaimer)
   - [AI generation & provenance](#ai-generation--provenance)
@@ -176,22 +175,18 @@ All assumptions — fixed costs per profile, per-query AI costs, regional price 
 
 ## Official Video Series & Curated YouTube Playlists (@nubenetes)
 
-This repository is backed by a dedicated **12-video multimedia curriculum** on the official [@nubenetes](https://www.youtube.com/@nubenetes) YouTube channel (**5 long-form architectural & FinOps deep dives** and **7 focused technical Shorts**) alongside 100% `@nubenetes`-exclusive companion series and the [Nubenetes Video Hub (`nubenetes.com/videos/`)](https://nubenetes.com/videos/).
+This repository is backed by a dedicated **12-video multimedia curriculum** created directly from this study on the official [@nubenetes](https://www.youtube.com/@nubenetes) YouTube channel (**5 long-form architectural & FinOps deep dives** and **7 focused technical Shorts**). For broader `@nubenetes` channel series covering individual Azure, Foundry, and Kubernetes pillars, explore the [Nubenetes Video Hub (`nubenetes.com/videos/ai-agents/`)](https://nubenetes.com/videos/ai-agents/).
 
 ### Curated YouTube Playlists
 
-All curated tracks below contain strictly `@nubenetes`-authored sessions and are synchronized with [nubenetes.com/videos/](https://nubenetes.com/videos/):
+The playlists below contain exclusively `@nubenetes` sessions generated from this repository and are synchronized with [nubenetes.com/videos/ai-agents/](https://nubenetes.com/videos/ai-agents/):
 
 | Track Type | Official `@nubenetes` Playlist | Scope & Relationship to This Study |
 | :--- | :--- | :--- |
-| **Primary Flagship Series** | [**⭐ Nubenetes FinOps for Agentic AI Architectures: Azure TCO, Foundry, AKS & Serverless**](https://www.youtube.com/playlist?list=PLLvKIaVqVF78) | Official 12-part playlist (5 deep dives + 7 Shorts) walking end-to-end through this repository's 4-zone deterministic guardrail pattern, A/B/C/D/S topologies, P1–P3 profiles, TCO crossovers, model routing, and DEV/PRE/PRO private parity. Also featured at [nubenetes.com/videos/ai-agents/](https://nubenetes.com/videos/ai-agents/). |
-| **Microsoft Foundry Track** | [**Nubenetes Microsoft Foundry: Enterprise AI Architecture, Security & Production Readiness**](https://www.youtube.com/playlist?list=PLIHPlQVunY48) | Control-plane architecture, Agent Service, Responses API, automated evaluations, VNet controls, and PTU governance (Option **B** core runtime). |
-| **Enterprise AI Platforms Track** | [**Nubenetes Enterprise AI Platforms: Cloud Control Planes vs Kubernetes & Agentic FinOps**](https://www.youtube.com/playlist?list=PLBZl7QsgYjrw) | Architectural trade-offs and TCO crossovers comparing managed cloud AI control planes vs. Kubernetes (Options **B** vs. **C**). |
-| **Azure Container Strategy Track** | [**Nubenetes Azure Container Strategy: AKS vs Container Apps, Networking & FinOps**](https://www.youtube.com/playlist?list=PLUlxI33bzjWQ) | Break-even maths, Functions integration, and VNet isolation across AKS, Container Apps, and serverless runtimes (Options **A**, **C**, and **D**). |
-| **Azure Hybrid IaaS FinOps Track** | [**Nubenetes Azure Hybrid IaaS FinOps Framework**](https://www.youtube.com/playlist?list=PLaNxiRbEBYJ8) | Azure compliance, storage WORM immutability, regional economics, and FinOps cost governance in EU/Spain Central workloads. |
-| **AI SRE & Agentic Operations Track** | [**Nubenetes AI SRE & Agentic Operations: Trust Ladder, Magentic Pattern & Self-Healing**](https://www.youtube.com/playlist?list=PLckcDbnSNdbE) | Zero-trust guardrails, human-in-the-loop escalation thresholds, and deterministic safety barriers for autonomous agents (Zones 1, 3, and 4). |
-| **MCP SRE & Security Track** | [**Nubenetes MCP SRE Agents & Security: Kubernetes, Ghostjacking & Defense in Depth**](https://www.youtube.com/playlist?list=PLa99gsQrC--U) | Deterministic execution permits, prompt-injection defense, and scoped Kubernetes tool guardrails. |
-| **English Podcasts Track** | [**⭐ Nubenetes Cloud Native Podcasts (English)**](https://www.youtube.com/playlist?list=PLBMAtCXWYfZA) | Long-form spoken engineering discussions including the 5 FinOps for Agentic AI deep-dive sessions. |
+| **Primary Flagship Series** | [**⭐ Nubenetes FinOps for Agentic AI Architectures: Azure TCO, Foundry, AKS & Serverless**](https://www.youtube.com/playlist?list=PLLvKIaVqVF78) | Official 12-part playlist (5 deep dives + 7 Shorts) generated from this repository, walking end-to-end through the 4-zone deterministic guardrail pattern, A/B/C/D/S topologies, P1–P3 profiles, TCO crossovers, model routing, and DEV/PRE/PRO private parity. |
+| **English Podcasts Track** | [**⭐ Nubenetes Cloud Native Podcasts (English)**](https://www.youtube.com/playlist?list=PLBMAtCXWYfZA) | Long-form spoken engineering track on `@nubenetes` that includes the 5 FinOps for Agentic AI deep-dive sessions generated from this repository. |
+
+For unrelated series generated from other Nubenetes repositories, visit the full index at [nubenetes.com/videos/](https://nubenetes.com/videos/).
 
 ### Dedicated Video Series for This Study (12 Sessions)
 
@@ -288,24 +283,6 @@ All curated tracks below contain strictly `@nubenetes`-authored sessions and are
 - **Watch**: [YouTube Short (`k8yBySfHSfE`)](https://www.youtube.com/shorts/k8yBySfHSfE) — Spike resilience via Zones 1–4 separation (**Sections 2, 9.2, 12.2**).
 - **Edge-to-Queue Decoupling**: Terminates public channels at Front Door Premium + WAF over Private Link into Flex Consumption Functions and signed queues decoupled from the delegated agent runtime subnet.
 - **Cost & TPM Protection**: Absorbs traffic bursts gracefully without paying for oversized always-on compute or exhausting downstream model PTU/TPM limits.
-
-### Companion @nubenetes Sessions on Individual Pillars
-
-In addition to the 12-video series dedicated directly to this study, the following existing sessions on [@nubenetes](https://www.youtube.com/@nubenetes) provide deep dives on its individual architectural and FinOps foundations:
-
-1. [The Great Foundry Shift: Enterprise AI Operating Model & FinOps Governance](https://www.youtube.com/watch?v=CkFIcxzEnVw) — FinOps governance for GenAI on Microsoft Foundry, Pay-As-You-Go vs. Provisioned Throughput (PTU) break-even, TPM limits, and Azure data sovereignty.
-2. [Cloud AI vs Kubernetes 2026: The Enterprise AI Control Plane Showdown](https://www.youtube.com/watch?v=9zosnOzQ90o) — Managed cloud AI control planes (Foundry, Bedrock, Vertex) vs. Kubernetes (AKS) for agentic platforms, "Zero Idle GPU Tax", MCP tool gateways, and data sovereignty.
-3. [Azure Container Apps vs AKS: Networking, VNet Security & FinOps Economics](https://www.youtube.com/watch?v=BeOCYxr9uYE) — Mathematical FinOps modelling and break-even thresholds (scale-to-zero vs. steady-state on AKS) and VNet isolation.
-4. [Azure Container Apps vs AKS: Azure Functions Integration & The 5-Lens Framework](https://www.youtube.com/watch?v=1hpnz3cz1Co) — Evaluating ACA vs. AKS including Azure Functions integration across five architectural lenses.
-5. [Microsoft Foundry Deep Dive: Agent Service, Responses API & Observability](https://www.youtube.com/watch?v=STC4L1w2cPg) — Foundry Agent Service runtime, threads, tool calling, and tracing (Architecture B runtime).
-6. [The 2026 Infrastructure Fork: Managed Cloud AI vs Disaggregated K8s Serving](https://www.youtube.com/watch?v=TUyX5PzEPGA) — Managed cloud AI platforms vs. disaggregated Kubernetes serving trade-offs.
-7. [Azure Storage WORM Optimizado: Arquitectura y Cumplimiento Legal en Spain Central](https://www.youtube.com/watch?v=IZBAQg3kP7c) — Immutable WORM storage architecture and legal compliance in the Azure Spain Central region.
-8. [Agentic SRE Defense in Depth: Zero-Trust Security for AI Agents](https://www.youtube.com/watch?v=XOrOjcgR_zg) — Zero-trust security guardrails, IAM, and prompt-injection defense for autonomous agents.
-9. [Building an MCP SRE Agent: Kubernetes Tools & Production Guardrails](https://www.youtube.com/watch?v=bWBZR6rpm2s) — Deterministic execution guardrails for MCP-based agents on Kubernetes.
-10. [AKS vs Azure Container Apps: The Cost of Control & Scale-to-Zero FinOps](https://www.youtube.com/shorts/NHeyQpW6i5s) — 1-minute comparison of scale-to-zero serverless economics vs. AKS fixed control planes.
-11. [How the FinOps CLI Automates Break Even Math](https://www.youtube.com/shorts/-iJ65ex08dA) — Automating break-even calculations from the command line on Azure.
-12. [Microsoft Foundry Production Readiness: Evaluations, SLAs & Safety](https://www.youtube.com/shorts/JDlkNqJIy9Q) — Continuous evaluation, safety guardrails, and production readiness in Microsoft Foundry.
-13. [Microsoft Foundry Enterprise Controls: Security, VNet & Deadlines](https://www.youtube.com/shorts/i72ZvGizCEE) — VNet injection and enterprise security controls in Microsoft Foundry.
 
 ## Repository structure
 
