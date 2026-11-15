@@ -15,6 +15,23 @@ A vendor-neutral, industry-agnostic **FinOps study and decision model** for ente
 >
 > 🤖 **AI Generation & Provenance**: The study, parametric FinOps model, Python calculator, unit tests and Mermaid diagrams in this repository were generated in **Google Antigravity** using **Claude Opus 5.5 (High)**, with YouTube catalog verification assisted by **Gemini Flash** and final updates via the **Antigravity Orchestrator**.
 
+## Table of Contents
+
+- [What it compares](#what-it-compares)
+- [Key findings](#key-findings)
+  - [Reference scenario (P3 Regulated, Spain Central)](#reference-scenario-p3-regulated-spain-central)
+  - [Guidance by organisation size](#guidance-by-organisation-size)
+  - [Decision tree](#decision-tree)
+- [Full Study Index (docs/finops-agentic-ai-architectures-study.md)](#full-study-index-docsfinops-agentic-ai-architectures-studymd)
+- [Run the calculator](#run-the-calculator)
+- [Related Videos on @nubenetes (YouTube)](#related-videos-on-nubenetes-youtube)
+  - [Long-Form Architectural & FinOps Guides](#long-form-architectural--finops-guides)
+  - [Technical Shorts](#technical-shorts)
+- [Repository structure](#repository-structure)
+- [Disclaimer](#disclaimer)
+  - [AI generation & provenance](#ai-generation--provenance)
+- [License](#license)
+
 ## What it compares
 
 | Option | Stack | In one sentence |
@@ -80,6 +97,57 @@ flowchart TD
     Q4 -->|"Yes"| B["B · Managed agentic platform"]
     Q4 -->|"No"| A["A · Pure serverless<br/>(designed to migrate to B)"]
 ```
+
+## Full Study Index (docs/finops-agentic-ai-architectures-study.md)
+
+Complete index of all sections and subsections in [docs/finops-agentic-ai-architectures-study.md](docs/finops-agentic-ai-architectures-study.md):
+
+- [0. Using this study in five minutes](docs/finops-agentic-ai-architectures-study.md#0-using-this-study-in-five-minutes)
+- [1. Executive summary](docs/finops-agentic-ai-architectures-study.md#1-executive-summary)
+- [2. Reference functional pattern](docs/finops-agentic-ai-architectures-study.md#2-reference-functional-pattern)
+- [3. The four candidate architectures and the SaaS benchmark](docs/finops-agentic-ai-architectures-study.md#3-the-four-candidate-architectures-and-the-saas-benchmark)
+- [4. FinOps cost model](docs/finops-agentic-ai-architectures-study.md#4-finops-cost-model)
+  - [4.1 Monthly cost equation](docs/finops-agentic-ai-architectures-study.md#41-monthly-cost-equation)
+  - [4.2 Three thresholds that drive the decision](docs/finops-agentic-ai-architectures-study.md#42-three-thresholds-that-drive-the-decision)
+- [5. The low-volume pilot paradox](docs/finops-agentic-ai-architectures-study.md#5-the-low-volume-pilot-paradox)
+- [6. Cost by volume: the full matrix](docs/finops-agentic-ai-architectures-study.md#6-cost-by-volume-the-full-matrix)
+- [7. Security profiles and efficiency thresholds](docs/finops-agentic-ai-architectures-study.md#7-security-profiles-and-efficiency-thresholds)
+- [8. Crossovers between architectures and the effect of the number of agents](docs/finops-agentic-ai-architectures-study.md#8-crossovers-between-architectures-and-the-effect-of-the-number-of-agents)
+  - [8.1 Crossover volumes (P3, one agent)](docs/finops-agentic-ai-architectures-study.md#81-crossover-volumes-p3-one-agent)
+  - [8.2 The number of use cases decides between A and B](docs/finops-agentic-ai-architectures-study.md#82-the-number-of-use-cases-decides-between-a-and-b)
+  - [8.3 The labour market shifts the thresholds](docs/finops-agentic-ai-architectures-study.md#83-the-labour-market-shifts-the-thresholds)
+- [9. Sensitivity to query type and AI spend optimisation](docs/finops-agentic-ai-architectures-study.md#9-sensitivity-to-query-type-and-ai-spend-optimisation)
+  - [9.1 When does a self-hosted small model pay off?](docs/finops-agentic-ai-architectures-study.md#91-when-does-a-self-hosted-small-model-pay-off)
+  - [9.2 Provisioned capacity vs. pay-per-token](docs/finops-agentic-ai-architectures-study.md#92-provisioned-capacity-vs-pay-per-token)
+- [10. Guidance by organisation size and comparison with SaaS](docs/finops-agentic-ai-architectures-study.md#10-guidance-by-organisation-size-and-comparison-with-saas)
+  - [10.1 Indicative scenarios by segment](docs/finops-agentic-ai-architectures-study.md#101-indicative-scenarios-by-segment)
+  - [10.2 Own platform vs. per-seat SaaS licences](docs/finops-agentic-ai-architectures-study.md#102-own-platform-vs-per-seat-saas-licences)
+- [11. Business case, ROI and value levers](docs/finops-agentic-ai-architectures-study.md#11-business-case-roi-and-value-levers)
+  - [11.1 Value model](docs/finops-agentic-ai-architectures-study.md#111-value-model)
+  - [11.2 Value roadmap: build the foundation once, amortise it across N use cases](docs/finops-agentic-ai-architectures-study.md#112-value-roadmap-build-the-foundation-once-amortise-it-across-n-use-cases)
+  - [11.3 Levers to improve TCO and ROI](docs/finops-agentic-ai-architectures-study.md#113-levers-to-improve-tco-and-roi)
+- [12. DEV/PRE/PRO parity and network topology](docs/finops-agentic-ai-architectures-study.md#12-devprepro-parity-and-network-topology)
+  - [12.1 Reference breakdown in P3 (1,000 queries/month, Spain Central)](docs/finops-agentic-ai-architectures-study.md#121-reference-breakdown-in-p3-1000-queriesmonth-spain-central)
+  - [12.2 Private network topology](docs/finops-agentic-ai-architectures-study.md#122-private-network-topology)
+- [13. Regional analysis: Europe and the United States](docs/finops-agentic-ai-architectures-study.md#13-regional-analysis-europe-and-the-united-states)
+  - [13.1 Regional price index](docs/finops-agentic-ai-architectures-study.md#131-regional-price-index)
+  - [13.2 Representative scenarios by region (cloud bill only)](docs/finops-agentic-ai-architectures-study.md#132-representative-scenarios-by-region-cloud-bill-only)
+  - [13.3 How to choose the primary region](docs/finops-agentic-ai-architectures-study.md#133-how-to-choose-the-primary-region)
+    - [Europe](docs/finops-agentic-ai-architectures-study.md#europe)
+    - [United States](docs/finops-agentic-ai-architectures-study.md#united-states)
+  - [13.4 What changes and what does not](docs/finops-agentic-ai-architectures-study.md#134-what-changes-and-what-does-not)
+- [14. Multi-region scaling and data sovereignty](docs/finops-agentic-ai-architectures-study.md#14-multi-region-scaling-and-data-sovereignty)
+- [15. Decision framework: when to use each option](docs/finops-agentic-ai-architectures-study.md#15-decision-framework-when-to-use-each-option)
+  - [15.1 Decision tree](docs/finops-agentic-ai-architectures-study.md#151-decision-tree)
+  - [15.2 When to use it and when not to](docs/finops-agentic-ai-architectures-study.md#152-when-to-use-it-and-when-not-to)
+  - [15.3 Non-economic criteria that can reverse the decision](docs/finops-agentic-ai-architectures-study.md#153-non-economic-criteria-that-can-reverse-the-decision)
+- [16. Operational FinOps practices for agentic AI](docs/finops-agentic-ai-architectures-study.md#16-operational-finops-practices-for-agentic-ai)
+  - [16.1 Inform (visibility and allocation)](docs/finops-agentic-ai-architectures-study.md#161-inform-visibility-and-allocation)
+  - [16.2 Optimize (unit economics)](docs/finops-agentic-ai-architectures-study.md#162-optimize-unit-economics)
+  - [16.3 Operate (continuous control)](docs/finops-agentic-ai-architectures-study.md#163-operate-continuous-control)
+- [17. Common cost anti-patterns](docs/finops-agentic-ai-architectures-study.md#17-common-cost-anti-patterns)
+- [18. Methodology, assumptions and limitations](docs/finops-agentic-ai-architectures-study.md#18-methodology-assumptions-and-limitations)
+- [19. References](docs/finops-agentic-ai-architectures-study.md#19-references)
 
 ## Run the calculator
 
